@@ -1,0 +1,18 @@
+@import 'tailwindcss/functions';
+@import 'tailwindcss/mixins';
+
+@mixin block {
+  @extend %flex;
+  @extend %items-center;
+}
+
+@mixin element($block) {
+  @extend %relative;
+  @extend %text-center;
+}
+
+@mixin hover($selector) {
+  #{$selector}:hover {
+    @content;
+  }
+}
