@@ -1,18 +1,29 @@
-@import 'tailwindcss/functions';
-@import 'tailwindcss/mixins';
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-@mixin block {
-  @extend %flex;
-  @extend %items-center;
+/* Mixins */
+@mixin text-2xl {
+  @apply text-2xl;
 }
 
-@mixin element($block) {
-  @extend %relative;
-  @extend %text-center;
+@mixin cursor-pointer {
+  @apply cursor-pointer;
 }
 
-@mixin hover($selector) {
-  #{$selector}:hover {
-    @content;
-  }
+@mixin h-10 {
+  @apply h-10;
 }
+
+@mixin text-xl {
+  @apply text-xl;
+}
+
+@mixin mx-4 {
+  @apply mx-4;
+}
+
+
+@import 'tailwindcss/defaultConfig';
+
+
